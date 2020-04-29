@@ -7,12 +7,13 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 # find the sum of the even-valued terms.
 
-i, j = 0, 1
-evenSum = 0
+def evenfib():
+	i, j = 0, 1
+	evenSum = 0
+	while i < 4000000:
+		if i % 2 == 0:
+			evenSum += i
+		i, j = j, i + j
+	print(evenSum)
 
-while i < 4000000:
-	if i % 2 == 0:
-		evenSum += i
-	i, j = j, i + j
-
-print(evenSum)
+evenfib()
